@@ -12,7 +12,7 @@ function PlaceAndPick:DoOnce()
         turtle.place()
     else
         local success, table = turtle.inspect()
-        if success and table.name == itemName then
+        if success and table.name == self.item then
             turtle.dig()
         end
     end
