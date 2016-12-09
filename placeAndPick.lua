@@ -13,7 +13,6 @@ function PlaceAndPick:SetItem(item)
 end
 
 function PlaceAndPick:DoOnce()
-    print('I say ')
     if not turtle.detect() then
         turtle.place()
     else
