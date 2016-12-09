@@ -1,9 +1,15 @@
 PlaceAndPick = {}
 
-function PlaceAndPick:new(item)
-    newObj = {item = item}
+function PlaceAndPick:new()
+    print("Set item with :SetItem(item)")
+    newObj = {}
     self.__index = self
     return setmetatable(newObj, self)
+end
+
+function PlaceAndPick:SetItem(item)
+    print("Item is " .. item)
+    self.item = item
 end
 
 function PlaceAndPick:DoOnce()
